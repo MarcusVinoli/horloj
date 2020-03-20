@@ -1,0 +1,287 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-MMH U1
+U 1 1 5E769B19
+P 3500 3900
+F 0 "U1" H 2856 3946 50  0000 R CNN
+F 1 "ATmega328P-MMH" H 2856 3855 50  0000 R CNN
+F 2 "Package_DFN_QFN:QFN-28-1EP_4x4mm_P0.45mm_EP2.4x2.4mm" H 3500 3900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3500 3900 50  0001 C CNN
+	1    3500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_Small Y1
+U 1 1 5E76C625
+P 5200 3350
+F 0 "Y1" V 5154 3438 50  0000 L CNN
+F 1 "32.768kHz" V 5245 3438 50  0000 L CNN
+F 2 "" H 5200 3350 50  0001 C CNN
+F 3 "~" H 5200 3350 50  0001 C CNN
+	1    5200 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 3300 5050 3200
+Wire Wire Line
+	4100 3400 5050 3400
+Wire Wire Line
+	5200 3250 5200 3200
+Wire Wire Line
+	5200 3200 5050 3200
+Wire Wire Line
+	5050 3500 5200 3500
+Wire Wire Line
+	5200 3500 5200 3450
+Wire Wire Line
+	5050 3400 5050 3500
+Wire Wire Line
+	4100 4200 5050 4200
+Text GLabel 4350 4500 2    50   Output ~ 0
+UART_TXD
+Text GLabel 4350 4400 2    50   Input ~ 0
+UART_RXD
+Wire Wire Line
+	4350 4500 4100 4500
+Wire Wire Line
+	4100 4400 4350 4400
+Text GLabel 4350 4100 2    50   Output ~ 0
+I2C_SCL
+Wire Wire Line
+	4350 4100 4100 4100
+Text GLabel 4350 4000 2    50   BiDi ~ 0
+I2C_SDA
+Wire Wire Line
+	4350 4000 4100 4000
+$Comp
+L power:GND #PWR01
+U 1 1 5E76F1F0
+P 3500 5500
+F 0 "#PWR01" H 3500 5250 50  0001 C CNN
+F 1 "GND" H 3505 5327 50  0000 C CNN
+F 2 "" H 3500 5500 50  0001 C CNN
+F 3 "" H 3500 5500 50  0001 C CNN
+	1    3500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5500 3500 5400
+Text GLabel 5050 4200 2    50   Input ~ 0
+~RESET
+Text GLabel 8600 3050 2    50   Output ~ 0
+DISP_04
+Text GLabel 8600 3350 2    50   Output ~ 0
+DISP_05
+Text GLabel 8600 3650 2    50   Output ~ 0
+DISP_06
+Wire Wire Line
+	4650 3200 4100 3200
+Wire Wire Line
+	4100 3100 4650 3100
+Wire Wire Line
+	4650 3000 4100 3000
+Text GLabel 8600 2150 2    50   Output ~ 0
+DISP_01
+Wire Wire Line
+	4650 2700 4100 2700
+Text GLabel 8600 2450 2    50   Output ~ 0
+DISP_02
+Wire Wire Line
+	4100 2800 4650 2800
+Text GLabel 8600 2750 2    50   Output ~ 0
+DISP_03
+Wire Wire Line
+	4650 2900 4100 2900
+Text Label 4150 3000 0    50   ~ 0
+SPI_MOSI
+Text Label 4150 3100 0    50   ~ 0
+SPI_MISO
+Text Label 4150 3200 0    50   ~ 0
+SPI_SCK
+Wire Wire Line
+	4350 4900 4100 4900
+Text GLabel 4350 4900 2    50   Output ~ 0
+SW_SIGNAL
+$Comp
+L Device:R R1
+U 1 1 5E77952B
+P 8350 2150
+F 0 "R1" V 8143 2150 50  0000 C CNN
+F 1 "100R" V 8234 2150 50  0000 C CNN
+F 2 "" V 8280 2150 50  0001 C CNN
+F 3 "~" H 8350 2150 50  0001 C CNN
+	1    8350 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 2150 8500 2150
+$Comp
+L Device:R R2
+U 1 1 5E779E23
+P 8350 2450
+F 0 "R2" V 8143 2450 50  0000 C CNN
+F 1 "100R" V 8234 2450 50  0000 C CNN
+F 2 "" V 8280 2450 50  0001 C CNN
+F 3 "~" H 8350 2450 50  0001 C CNN
+	1    8350 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E77A0CA
+P 8350 2750
+F 0 "R3" V 8143 2750 50  0000 C CNN
+F 1 "100R" V 8234 2750 50  0000 C CNN
+F 2 "" V 8280 2750 50  0001 C CNN
+F 3 "~" H 8350 2750 50  0001 C CNN
+	1    8350 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E77A366
+P 8350 3050
+F 0 "R4" V 8143 3050 50  0000 C CNN
+F 1 "100R" V 8234 3050 50  0000 C CNN
+F 2 "" V 8280 3050 50  0001 C CNN
+F 3 "~" H 8350 3050 50  0001 C CNN
+	1    8350 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E77A54B
+P 8350 3350
+F 0 "R5" V 8143 3350 50  0000 C CNN
+F 1 "100R" V 8234 3350 50  0000 C CNN
+F 2 "" V 8280 3350 50  0001 C CNN
+F 3 "~" H 8350 3350 50  0001 C CNN
+	1    8350 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5E77A820
+P 8350 3650
+F 0 "R6" V 8143 3650 50  0000 C CNN
+F 1 "100R" V 8234 3650 50  0000 C CNN
+F 2 "" V 8280 3650 50  0001 C CNN
+F 3 "~" H 8350 3650 50  0001 C CNN
+	1    8350 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 2450 8500 2450
+Wire Wire Line
+	8500 2750 8600 2750
+Wire Wire Line
+	8600 3050 8500 3050
+Wire Wire Line
+	8500 3350 8600 3350
+Wire Wire Line
+	8600 3650 8500 3650
+Text GLabel 8600 4850 2    50   Output ~ 0
+DISP_10
+Text GLabel 8600 5150 2    50   Output ~ 0
+DISP_11
+Text GLabel 8600 5450 2    50   Output ~ 0
+DISP_12
+Text GLabel 8600 3950 2    50   Output ~ 0
+DISP_07
+Text GLabel 8600 4250 2    50   Output ~ 0
+DISP_08
+Text GLabel 8600 4550 2    50   Output ~ 0
+DISP_09
+$Comp
+L Device:R R7
+U 1 1 5E78A29C
+P 8350 3950
+F 0 "R7" V 8143 3950 50  0000 C CNN
+F 1 "100R" V 8234 3950 50  0000 C CNN
+F 2 "" V 8280 3950 50  0001 C CNN
+F 3 "~" H 8350 3950 50  0001 C CNN
+	1    8350 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 3950 8500 3950
+$Comp
+L Device:R R8
+U 1 1 5E78A2A3
+P 8350 4250
+F 0 "R8" V 8143 4250 50  0000 C CNN
+F 1 "100R" V 8234 4250 50  0000 C CNN
+F 2 "" V 8280 4250 50  0001 C CNN
+F 3 "~" H 8350 4250 50  0001 C CNN
+	1    8350 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E78A2A9
+P 8350 4550
+F 0 "R9" V 8143 4550 50  0000 C CNN
+F 1 "100R" V 8234 4550 50  0000 C CNN
+F 2 "" V 8280 4550 50  0001 C CNN
+F 3 "~" H 8350 4550 50  0001 C CNN
+	1    8350 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E78A2AF
+P 8350 4850
+F 0 "R10" V 8143 4850 50  0000 C CNN
+F 1 "100R" V 8234 4850 50  0000 C CNN
+F 2 "" V 8280 4850 50  0001 C CNN
+F 3 "~" H 8350 4850 50  0001 C CNN
+	1    8350 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E78A2B5
+P 8350 5150
+F 0 "R11" V 8143 5150 50  0000 C CNN
+F 1 "100R" V 8234 5150 50  0000 C CNN
+F 2 "" V 8280 5150 50  0001 C CNN
+F 3 "~" H 8350 5150 50  0001 C CNN
+	1    8350 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E78A2BB
+P 8350 5450
+F 0 "R12" V 8143 5450 50  0000 C CNN
+F 1 "100R" V 8234 5450 50  0000 C CNN
+F 2 "" V 8280 5450 50  0001 C CNN
+F 3 "~" H 8350 5450 50  0001 C CNN
+	1    8350 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 4250 8500 4250
+Wire Wire Line
+	8500 4550 8600 4550
+Wire Wire Line
+	8600 4850 8500 4850
+Wire Wire Line
+	8500 5150 8600 5150
+Wire Wire Line
+	8600 5450 8500 5450
+$EndSCHEMATC
