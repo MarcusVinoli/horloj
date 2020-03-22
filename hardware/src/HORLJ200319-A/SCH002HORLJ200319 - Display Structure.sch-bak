@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 3 10
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,292 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 7050 2000 1000 500 
+U 5E79D53E
+F0 "Display Chronograph" 50
+F1 "SCH100HORLJ200319 - Display Chronograph.sch" 50
+$EndSheet
+$Sheet
+S 7050 3000 1000 500 
+U 5E79D627
+F0 "Display Time" 50
+F1 "SCH101HORLJ200319 - Display Time.sch" 50
+$EndSheet
+$Sheet
+S 7050 4000 1000 500 
+U 5E79D720
+F0 "Display Bar" 50
+F1 "SCH102HORLJ200319 - Display Bar.sch" 50
+$EndSheet
+$Sheet
+S 7050 5000 1000 500 
+U 5E79D80C
+F0 "Display Icons" 50
+F1 "SCH103HORLJ200319 - Display Icons.sch" 50
+$EndSheet
+$Comp
+L Device:R R?
+U 1 1 5E7A932C
+P 3100 1750
+AR Path="/5E738E8A/5E7A932C" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A932C" Ref="R2"  Part="1" 
+F 0 "R2" V 2893 1750 50  0000 C CNN
+F 1 "100R" V 2984 1750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 1750 50  0001 C CNN
+F 3 "~" H 3100 1750 50  0001 C CNN
+F 4 "" V 3100 1750 50  0001 C CNN "Part Number"
+	1    3100 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9333
+P 3100 6750
+AR Path="/5E738E8A/5E7A9333" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9333" Ref="R12"  Part="1" 
+F 0 "R12" V 2893 6750 50  0000 C CNN
+F 1 "100R" V 2984 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 6750 50  0001 C CNN
+F 3 "~" H 3100 6750 50  0001 C CNN
+F 4 "" V 3100 6750 50  0001 C CNN "Part Number"
+	1    3100 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A933A
+P 3100 6250
+AR Path="/5E738E8A/5E7A933A" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A933A" Ref="R11"  Part="1" 
+F 0 "R11" V 2893 6250 50  0000 C CNN
+F 1 "100R" V 2984 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 6250 50  0001 C CNN
+F 3 "~" H 3100 6250 50  0001 C CNN
+F 4 "" V 3100 6250 50  0001 C CNN "Part Number"
+	1    3100 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9341
+P 3100 5750
+AR Path="/5E738E8A/5E7A9341" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9341" Ref="R10"  Part="1" 
+F 0 "R10" V 2893 5750 50  0000 C CNN
+F 1 "100R" V 2984 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 5750 50  0001 C CNN
+F 3 "~" H 3100 5750 50  0001 C CNN
+F 4 "" V 3100 5750 50  0001 C CNN "Part Number"
+	1    3100 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9348
+P 3100 5250
+AR Path="/5E738E8A/5E7A9348" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9348" Ref="R9"  Part="1" 
+F 0 "R9" V 2893 5250 50  0000 C CNN
+F 1 "100R" V 2984 5250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 5250 50  0001 C CNN
+F 3 "~" H 3100 5250 50  0001 C CNN
+F 4 "" V 3100 5250 50  0001 C CNN "Part Number"
+	1    3100 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A934F
+P 3100 4750
+AR Path="/5E738E8A/5E7A934F" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A934F" Ref="R8"  Part="1" 
+F 0 "R8" V 2893 4750 50  0000 C CNN
+F 1 "100R" V 2984 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 4750 50  0001 C CNN
+F 3 "~" H 3100 4750 50  0001 C CNN
+F 4 "" V 3100 4750 50  0001 C CNN "Part Number"
+	1    3100 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9356
+P 3100 4250
+AR Path="/5E738E8A/5E7A9356" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9356" Ref="R7"  Part="1" 
+F 0 "R7" V 2893 4250 50  0000 C CNN
+F 1 "100R" V 2984 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 4250 50  0001 C CNN
+F 3 "~" H 3100 4250 50  0001 C CNN
+F 4 "" V 3100 4250 50  0001 C CNN "Part Number"
+	1    3100 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A935D
+P 3100 3750
+AR Path="/5E738E8A/5E7A935D" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A935D" Ref="R6"  Part="1" 
+F 0 "R6" V 2893 3750 50  0000 C CNN
+F 1 "100R" V 2984 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 3750 50  0001 C CNN
+F 3 "~" H 3100 3750 50  0001 C CNN
+F 4 "" V 3100 3750 50  0001 C CNN "Part Number"
+	1    3100 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9364
+P 3100 3250
+AR Path="/5E738E8A/5E7A9364" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9364" Ref="R5"  Part="1" 
+F 0 "R5" V 2893 3250 50  0000 C CNN
+F 1 "100R" V 2984 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 3250 50  0001 C CNN
+F 3 "~" H 3100 3250 50  0001 C CNN
+F 4 "" V 3100 3250 50  0001 C CNN "Part Number"
+	1    3100 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A936B
+P 3100 2750
+AR Path="/5E738E8A/5E7A936B" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A936B" Ref="R4"  Part="1" 
+F 0 "R4" V 2893 2750 50  0000 C CNN
+F 1 "100R" V 2984 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 2750 50  0001 C CNN
+F 3 "~" H 3100 2750 50  0001 C CNN
+F 4 "" V 3100 2750 50  0001 C CNN "Part Number"
+	1    3100 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9372
+P 3100 2250
+AR Path="/5E738E8A/5E7A9372" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9372" Ref="R3"  Part="1" 
+F 0 "R3" V 2893 2250 50  0000 C CNN
+F 1 "100R" V 2984 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 2250 50  0001 C CNN
+F 3 "~" H 3100 2250 50  0001 C CNN
+F 4 "" V 3100 2250 50  0001 C CNN "Part Number"
+	1    3100 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7A9387
+P 3100 1250
+AR Path="/5E738E8A/5E7A9387" Ref="R?"  Part="1" 
+AR Path="/5E79D498/5E7A9387" Ref="R1"  Part="1" 
+F 0 "R1" V 2893 1250 50  0000 C CNN
+F 1 "100R" V 2984 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3030 1250 50  0001 C CNN
+F 3 "~" H 3100 1250 50  0001 C CNN
+F 4 "" V 3100 1250 50  0001 C CNN "Part Number"
+	1    3100 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 1250 2950 1250
+Wire Wire Line
+	2750 1750 2950 1750
+Wire Wire Line
+	3500 6250 3250 6250
+Text GLabel 3500 6250 2    50   UnSpc ~ 0
+DBUS_11
+Wire Wire Line
+	3500 5750 3250 5750
+Text GLabel 3500 5750 2    50   UnSpc ~ 0
+DBUS_10
+Wire Wire Line
+	3500 5250 3250 5250
+Text GLabel 3500 5250 2    50   UnSpc ~ 0
+DBUS_09
+Wire Wire Line
+	3250 4750 3500 4750
+Text GLabel 3500 4750 2    50   UnSpc ~ 0
+DBUS_08
+Wire Wire Line
+	3500 4250 3250 4250
+Text GLabel 3500 4250 2    50   UnSpc ~ 0
+DBUS_07
+Wire Wire Line
+	3500 3750 3250 3750
+Text GLabel 3500 3750 2    50   UnSpc ~ 0
+DBUS_06
+Wire Wire Line
+	3500 3250 3250 3250
+Text GLabel 3500 3250 2    50   UnSpc ~ 0
+DBUS_05
+Wire Wire Line
+	3500 2750 3250 2750
+Text GLabel 3500 2750 2    50   UnSpc ~ 0
+DBUS_04
+Wire Wire Line
+	3500 2250 3250 2250
+Text GLabel 3500 2250 2    50   UnSpc ~ 0
+DBUS_03
+Wire Wire Line
+	3500 1750 3250 1750
+Text GLabel 3500 1750 2    50   UnSpc ~ 0
+DBUS_02
+Wire Wire Line
+	3500 1250 3250 1250
+Text GLabel 3500 1250 2    50   UnSpc ~ 0
+DBUS_01
+Wire Wire Line
+	3250 6750 3500 6750
+Text GLabel 3500 6750 2    50   UnSpc ~ 0
+DBUS_12
+Text HLabel 2750 1250 0    50   Input ~ 0
+PORTB_0
+Text HLabel 2750 1750 0    50   Input ~ 0
+PORTB_1
+Text HLabel 2750 2250 0    50   Input ~ 0
+PORTB_2
+Text HLabel 2750 2750 0    50   Input ~ 0
+PORTB_3
+Text HLabel 2750 3250 0    50   Input ~ 0
+PORTB_4
+Text HLabel 2750 3750 0    50   Input ~ 0
+PORTB_5
+Wire Wire Line
+	2750 2250 2950 2250
+Wire Wire Line
+	2950 2750 2750 2750
+Wire Wire Line
+	2750 3250 2950 3250
+Wire Wire Line
+	2750 3750 2950 3750
+Text HLabel 2750 4250 0    50   Input ~ 0
+PORTD_2
+Text HLabel 2750 4750 0    50   Input ~ 0
+PORTD_3
+Text HLabel 2750 5250 0    50   Input ~ 0
+PORTD_4
+Text HLabel 2750 5750 0    50   Input ~ 0
+PORTD_5
+Text HLabel 2750 6250 0    50   Input ~ 0
+PORTD_6
+Text HLabel 2750 6750 0    50   Input ~ 0
+PORTD_7
+Wire Wire Line
+	2750 4250 2950 4250
+Wire Wire Line
+	2750 4750 2950 4750
+Wire Wire Line
+	2750 5250 2950 5250
+Wire Wire Line
+	2750 5750 2950 5750
+Wire Wire Line
+	2750 6250 2950 6250
+Wire Wire Line
+	2750 6750 2950 6750
 $EndSCHEMATC
