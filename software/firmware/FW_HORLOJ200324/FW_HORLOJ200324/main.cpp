@@ -8,6 +8,7 @@
 #include <util/delay.h>
 
 #include "rtc.h"
+#include "charlieplexing.h"
 
 rtc sysRTC;
 
@@ -27,7 +28,7 @@ void holdTime(){
 
 ISR(TIMER2_OVF_vect){
 	//cli();
-	sysRTC.Ticker();
+	sysRTC.ticker();
 	PORTB ^= (1<<2);
 	_delay_ms(100);
 	PORTB ^= (1<<2);

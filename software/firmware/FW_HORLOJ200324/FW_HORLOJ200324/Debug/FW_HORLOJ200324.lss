@@ -127,10 +127,10 @@ ISR(TIMER2_OVF_vect){
   ca:	ef 93       	push	r30
   cc:	ff 93       	push	r31
 	//cli();
-	sysRTC.Ticker();
+	sysRTC.ticker();
   ce:	80 e0       	ldi	r24, 0x00	; 0
   d0:	91 e0       	ldi	r25, 0x01	; 1
-  d2:	0e 94 8f 00 	call	0x11e	; 0x11e <_ZN3rtc6TickerEv>
+  d2:	0e 94 8f 00 	call	0x11e	; 0x11e <_ZN3rtc6tickerEv>
 	PORTB ^= (1<<2);
   d6:	95 b1       	in	r25, 0x05	; 5
   d8:	84 e0       	ldi	r24, 0x04	; 4
@@ -189,7 +189,7 @@ int main(void)
  11a:	78 94       	sei
  11c:	ff cf       	rjmp	.-2      	; 0x11c <main+0xa>
 
-0000011e <_ZN3rtc6TickerEv>:
+0000011e <_ZN3rtc6tickerEv>:
 inline void rtc::incrementTime(){
 	incrementSeconds();
 }
@@ -200,7 +200,7 @@ inline void rtc::incrementSeconds(){
  122:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <_ZN3rtc13_current_timeE+0x5>
  126:	8b 33       	cpi	r24, 0x3B	; 59
  128:	91 05       	cpc	r25, r1
- 12a:	09 f5       	brne	.+66     	; 0x16e <_ZN3rtc6TickerEv+0x50>
+ 12a:	09 f5       	brne	.+66     	; 0x16e <_ZN3rtc6tickerEv+0x50>
 		_current_time.sec = 0;
  12c:	e1 e0       	ldi	r30, 0x01	; 1
  12e:	f1 e0       	ldi	r31, 0x01	; 1
@@ -216,7 +216,7 @@ inline void rtc::incrementMinutes(){
  136:	93 81       	ldd	r25, Z+3	; 0x03
  138:	8b 33       	cpi	r24, 0x3B	; 59
  13a:	91 05       	cpc	r25, r1
- 13c:	91 f4       	brne	.+36     	; 0x162 <_ZN3rtc6TickerEv+0x44>
+ 13c:	91 f4       	brne	.+36     	; 0x162 <_ZN3rtc6tickerEv+0x44>
 		_current_time.min = 0;
  13e:	13 82       	std	Z+3, r1	; 0x03
  140:	12 82       	std	Z+2, r1	; 0x02
@@ -230,7 +230,7 @@ inline void rtc::incrementHours(){
  144:	91 81       	ldd	r25, Z+1	; 0x01
  146:	87 31       	cpi	r24, 0x17	; 23
  148:	91 05       	cpc	r25, r1
- 14a:	29 f4       	brne	.+10     	; 0x156 <_ZN3rtc6TickerEv+0x38>
+ 14a:	29 f4       	brne	.+10     	; 0x156 <_ZN3rtc6tickerEv+0x38>
 		_current_time.hour = 0;
  14c:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <_ZN3rtc13_current_timeE+0x1>
  150:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <_ZN3rtc13_current_timeE>

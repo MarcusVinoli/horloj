@@ -7,7 +7,7 @@
 //Static Variables Definition
 timeformat_t rtc::_current_time;
 
-void rtc::Ticker(){
+void rtc::ticker(){
 	
 	incrementTime();
 }

@@ -19,7 +19,7 @@ class rtc{
 	rtc(){ }
 	
 	//Time Increment on ISR
-	void Ticker();
+	void ticker();
 	
 	//Time Handling
 	void getTime(timeformat_t *now_time);
