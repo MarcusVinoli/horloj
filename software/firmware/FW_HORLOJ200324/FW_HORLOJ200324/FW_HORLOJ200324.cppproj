@@ -166,6 +166,9 @@
     <Compile Include="charlieplexing.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="display_data.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="hal.h">
       <SubType>compile</SubType>
     </Compile>
