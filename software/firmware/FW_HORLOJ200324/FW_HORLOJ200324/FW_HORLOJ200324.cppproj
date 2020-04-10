@@ -163,6 +163,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="charlieplexing.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="charlieplexing.h">
       <SubType>compile</SubType>
     </Compile>
