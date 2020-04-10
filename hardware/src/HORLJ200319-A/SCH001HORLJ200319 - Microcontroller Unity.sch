@@ -36,14 +36,10 @@ Wire Wire Line
 	5400 3400 5400 3500
 Wire Wire Line
 	4100 4200 5050 4200
-Text GLabel 4350 4500 2    50   Output ~ 0
-UART_TXD
-Text GLabel 4350 4400 2    50   Input ~ 0
-UART_RXD
 Wire Wire Line
-	4350 4500 4100 4500
+	4700 4500 4100 4500
 Wire Wire Line
-	4100 4400 4350 4400
+	4100 4400 4700 4400
 Text GLabel 4350 4100 2    50   Output ~ 0
 I2C_SCL
 Wire Wire Line
@@ -74,10 +70,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 3000 4100 3000
 Wire Wire Line
-	4650 2700 4100 2700
-Wire Wire Line
-	4100 2800 4650 2800
-Wire Wire Line
 	4650 2900 4100 2900
 Text Label 4150 3000 0    50   ~ 0
 SPI_MOSI
@@ -85,10 +77,10 @@ Text Label 4150 3100 0    50   ~ 0
 SPI_MISO
 Text Label 4150 3200 0    50   ~ 0
 SPI_SCK
-Text HLabel 4650 2700 2    50   Output ~ 0
-PORTB_0
-Text HLabel 4650 2800 2    50   Output ~ 0
-PORTB_1
+Text HLabel 4700 4400 2    50   Output ~ 0
+PORTD_0
+Text HLabel 4700 4500 2    50   Output ~ 0
+PORTD_1
 Text HLabel 4650 2900 2    50   Output ~ 0
 PORTB_2
 Text HLabel 4650 3000 2    50   Output ~ 0

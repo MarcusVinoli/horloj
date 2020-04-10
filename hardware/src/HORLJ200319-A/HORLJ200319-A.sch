@@ -209,12 +209,12 @@ Text Label 7300 1900 0    50   ~ 0
 PD4
 Text Label 7300 2000 0    50   ~ 0
 PD5
-Wire Bus Line
-	5450 2650 5450 4050
-Wire Bus Line
-	7200 1200 7200 2650
 Text Label 7300 2100 0    50   ~ 0
 PD6
 Text Label 7300 2200 0    50   ~ 0
 PD7
+Wire Bus Line
+	5450 2650 5450 4050
+Wire Bus Line
+	7200 1200 7200 2650
 $EndSCHEMATC
