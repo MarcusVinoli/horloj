@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 10
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -29,9 +29,7 @@ Wire Wire Line
 Wire Wire Line
 	4100 3400 5400 3400
 Wire Wire Line
-	5550 3200 5400 3200
-Wire Wire Line
-	5400 3500 5550 3500
+	6150 3200 5950 3200
 Wire Wire Line
 	5400 3400 5400 3500
 Wire Wire Line
@@ -69,8 +67,6 @@ Wire Wire Line
 	4100 3100 4650 3100
 Wire Wire Line
 	4650 3000 4100 3000
-Wire Wire Line
-	4650 2900 4100 2900
 Text Label 4150 3000 0    50   ~ 0
 SPI_MOSI
 Text Label 4150 3100 0    50   ~ 0
@@ -78,46 +74,46 @@ SPI_MISO
 Text Label 4150 3200 0    50   ~ 0
 SPI_SCK
 Text HLabel 4700 4400 2    50   Output ~ 0
-PORTD_0
+DISPLAY_PIN1
 Text HLabel 4700 4500 2    50   Output ~ 0
-PORTD_1
+DISPLAY_PIN2
 Text HLabel 4650 2900 2    50   Output ~ 0
-PORTB_2
+DISPLAY_PIN8
 Text HLabel 4650 3000 2    50   Output ~ 0
-PORTB_3
+DISPLAY_PIN9
 Text HLabel 4650 3100 2    50   Output ~ 0
-PORTB_4
+DISPLAY_PIN10
 Text HLabel 4650 3200 2    50   Output ~ 0
-PORTB_5
+DISPLAY_PIN11
 Wire Wire Line
 	4100 3300 5400 3300
 Wire Wire Line
-	5550 3500 5550 3450
+	6150 3500 6150 3450
 Wire Wire Line
-	5550 3250 5550 3200
+	6150 3250 6150 3200
 $Comp
 L Device:Crystal_Small Y1
 U 1 1 5E76C625
-P 5550 3350
-F 0 "Y1" V 5504 3438 50  0000 L CNN
-F 1 "32.768kHz" V 5595 3438 50  0000 L CNN
-F 2 "Crystal:Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal" H 5550 3350 50  0001 C CNN
-F 3 "~" H 5550 3350 50  0001 C CNN
-	1    5550 3350
+P 6150 3350
+F 0 "Y1" V 6104 3438 50  0000 L CNN
+F 1 "32.768kHz" V 6195 3438 50  0000 L CNN
+F 2 "Crystal:Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal" H 6150 3350 50  0001 C CNN
+F 3 "~" H 6150 3350 50  0001 C CNN
+	1    6150 3350
 	0    1    1    0   
 $EndComp
 Text HLabel 4700 4600 2    50   Output ~ 0
-PORTD_2
+DISPLAY_PIN3
 Text HLabel 4700 4700 2    50   Output ~ 0
-PORTD_3
+DISPLAY_PIN4
 Text HLabel 4700 4800 2    50   Output ~ 0
-PORTD_4
+DISPLAY_PIN5
 Text HLabel 4700 4900 2    50   Output ~ 0
-PORTD_5
+DISPLAY_PIN6
 Text HLabel 4700 5000 2    50   Output ~ 0
-PORTD_6
+DISPLAY_PIN7
 Text HLabel 4700 5100 2    50   Output ~ 0
-PORTD_7
+DISPLAY_PIN8
 Wire Wire Line
 	4700 5100 4100 5100
 Wire Wire Line
@@ -130,4 +126,70 @@ Wire Wire Line
 	4700 4700 4100 4700
 Wire Wire Line
 	4100 4600 4700 4600
+Wire Wire Line
+	5400 3500 5550 3500
+Wire Wire Line
+	4650 2900 4100 2900
+$Comp
+L Device:C C?
+U 1 1 5E92D3C7
+P 5950 3700
+F 0 "C?" H 6065 3746 50  0000 L CNN
+F 1 "22pF" H 6065 3655 50  0000 L CNN
+F 2 "" H 5988 3550 50  0001 C CNN
+F 3 "~" H 5950 3700 50  0001 C CNN
+	1    5950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E92E3B1
+P 5550 3700
+F 0 "C?" H 5665 3746 50  0000 L CNN
+F 1 "22pF" H 5665 3655 50  0000 L CNN
+F 2 "" H 5588 3550 50  0001 C CNN
+F 3 "~" H 5550 3700 50  0001 C CNN
+	1    5550 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E92FBD2
+P 5550 3900
+F 0 "#PWR?" H 5550 3650 50  0001 C CNN
+F 1 "GND" H 5555 3727 50  0000 C CNN
+F 2 "" H 5550 3900 50  0001 C CNN
+F 3 "" H 5550 3900 50  0001 C CNN
+	1    5550 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E930071
+P 5950 3900
+F 0 "#PWR?" H 5950 3650 50  0001 C CNN
+F 1 "GND" H 5955 3727 50  0000 C CNN
+F 2 "" H 5950 3900 50  0001 C CNN
+F 3 "" H 5950 3900 50  0001 C CNN
+	1    5950 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3900 5950 3850
+Wire Wire Line
+	5550 3900 5550 3850
+Wire Wire Line
+	5550 3550 5550 3500
+Connection ~ 5550 3500
+Wire Wire Line
+	5550 3500 6150 3500
+Wire Wire Line
+	5950 3550 5950 3200
+Connection ~ 5950 3200
+Wire Wire Line
+	5950 3200 5400 3200
+Wire Wire Line
+	4350 3600 4100 3600
+Text GLabel 4350 3600 2    50   BiDi ~ 0
+BATT
 $EndSCHEMATC
