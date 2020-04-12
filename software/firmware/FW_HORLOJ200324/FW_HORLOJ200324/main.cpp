@@ -10,6 +10,7 @@
 #include "rtc.h"
 #include "charlieplexing.h"
 
+unsigned int testeLimite;
 rtc sysRTC;
 
 void setupTIMER2(){
@@ -28,25 +29,26 @@ void holdTime(){
 
 ISR(TIMER2_OVF_vect){
 	//cli();
-	sysRTC.ticker();
-	PORTB ^= (1<<2);
-	_delay_ms(100);
-	PORTB ^= (1<<2);
+// 	sysRTC.ticker();
+// 	PORTB ^= (1<<2);
+// 	_delay_ms(100);
+// 	PORTB ^= (1<<2);
 	//sei();
 }
 
 int main(void)
 {
-	setupTIMER2();
-	
-	DDRB |= (1<<2);
-	PORTB |= (1<<2);
-	
-	sei();
+	//setupTIMER2();
 		
+	//sei();
+	DDRC |=(1<<5);
+	testeLimite = END_OF_SEQUENCE_FOR_SECOND_PIN;
+	
     while (1) 
     {
-		
+		charlieplexDisplay();
+		_delay_ms(500);
+		//PORTC ^=(1<<5);
     }
 }
 
