@@ -3,31 +3,31 @@ FW_HORLOJ200324.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000004  00800100  00000292  00000326  2**0
+  0 .data         00000004  00800100  00000290  00000324  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000292  00000000  00000000  00000094  2**1
+  1 .text         00000290  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000006  00800104  00800104  0000032a  2**0
+  2 .bss          00000006  00800104  00800104  00000328  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  0000032a  2**0
+  3 .comment      00000030  00000000  00000000  00000328  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000035c  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000358  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000068  00000000  00000000  0000039c  2**0
+  5 .debug_aranges 00000068  00000000  00000000  00000398  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000c4d  00000000  00000000  00000404  2**0
+  6 .debug_info   00000c4d  00000000  00000000  00000400  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000912  00000000  00000000  00001051  2**0
+  7 .debug_abbrev 00000912  00000000  00000000  0000104d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000003f3  00000000  00000000  00001963  2**0
+  8 .debug_line   000003f2  00000000  00000000  0000195f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000000a4  00000000  00000000  00001d58  2**2
+  9 .debug_frame  000000a4  00000000  00000000  00001d54  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000087e  00000000  00000000  00001dfc  2**0
+ 10 .debug_str    0000087e  00000000  00000000  00001df8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000008e  00000000  00000000  0000267a  2**0
+ 11 .debug_loc    0000008e  00000000  00000000  00002676  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000060  00000000  00000000  00002708  2**0
+ 12 .debug_ranges 00000060  00000000  00000000  00002704  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -42,7 +42,7 @@ Disassembly of section .text:
   18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
   1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
   20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
-  24:	0c 94 24 01 	jmp	0x248	; 0x248 <__vector_9>
+  24:	0c 94 23 01 	jmp	0x246	; 0x246 <__vector_9>
   28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
   2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
   30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
@@ -61,7 +61,7 @@ Disassembly of section .text:
   64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
 
 00000068 <__ctors_start>:
-  68:	15 01       	movw	r2, r10
+  68:	14 01       	movw	r2, r8
 
 0000006a <__ctors_end>:
   6a:	11 24       	eor	r1, r1
@@ -75,7 +75,7 @@ Disassembly of section .text:
   76:	11 e0       	ldi	r17, 0x01	; 1
   78:	a0 e0       	ldi	r26, 0x00	; 0
   7a:	b1 e0       	ldi	r27, 0x01	; 1
-  7c:	e2 e9       	ldi	r30, 0x92	; 146
+  7c:	e0 e9       	ldi	r30, 0x90	; 144
   7e:	f2 e0       	ldi	r31, 0x02	; 2
   80:	02 c0       	rjmp	.+4      	; 0x86 <__do_copy_data+0x10>
   82:	05 90       	lpm	r0, Z+
@@ -105,12 +105,12 @@ Disassembly of section .text:
   a2:	04 c0       	rjmp	.+8      	; 0xac <__do_global_ctors+0x10>
   a4:	21 97       	sbiw	r28, 0x01	; 1
   a6:	fe 01       	movw	r30, r28
-  a8:	0e 94 41 01 	call	0x282	; 0x282 <__tablejump2__>
+  a8:	0e 94 40 01 	call	0x280	; 0x280 <__tablejump2__>
   ac:	c4 33       	cpi	r28, 0x34	; 52
   ae:	d1 07       	cpc	r29, r17
   b0:	c9 f7       	brne	.-14     	; 0xa4 <__do_global_ctors+0x8>
-  b2:	0e 94 2e 01 	call	0x25c	; 0x25c <main>
-  b6:	0c 94 47 01 	jmp	0x28e	; 0x28e <_exit>
+  b2:	0e 94 2d 01 	call	0x25a	; 0x25a <main>
+  b6:	0c 94 46 01 	jmp	0x28c	; 0x28c <_exit>
 
 000000ba <__bad_interrupt>:
   ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -121,12 +121,12 @@ Disassembly of section .text:
 */
 
 void cleanDisplayCode(){
-	ledCounter = 1;
-  be:	81 e0       	ldi	r24, 0x01	; 1
-  c0:	90 e0       	ldi	r25, 0x00	; 0
-  c2:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <ledCounter+0x1>
-  c6:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <ledCounter>
+	ledCounter = 0;
+  be:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <ledCounter+0x1>
+  c2:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <ledCounter>
 	first_pin = (1<<0);
+  c6:	81 e0       	ldi	r24, 0x01	; 1
+  c8:	90 e0       	ldi	r25, 0x00	; 0
   ca:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <first_pin+0x1>
   ce:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <first_pin>
 	second_pin = (1<<1);
@@ -146,299 +146,296 @@ void cleanDisplayCode(){
   fa:	08 95       	ret
 
 000000fc <_Z18charlieplexDisplayv>:
+}
+
+inline void	incrementLedCounter(){
+	if(ledCounter == NUMBER_OF_CHARLIE_LEDS){
+  fc:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 100:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 104:	88 37       	cpi	r24, 0x78	; 120
+ 106:	91 05       	cpc	r25, r1
+ 108:	19 f4       	brne	.+6      	; 0x110 <_Z18charlieplexDisplayv+0x14>
+		cleanDisplayCode();
+ 10a:	0e 94 5f 00 	call	0xbe	; 0xbe <_Z16cleanDisplayCodev>
+ 10e:	09 c0       	rjmp	.+18     	; 0x122 <_Z18charlieplexDisplayv+0x26>
+	} else {
+		ledCounter++;
+ 110:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 114:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 118:	01 96       	adiw	r24, 0x01	; 1
+ 11a:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <ledCounter+0x1>
+ 11e:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <ledCounter>
 inline bool isEven(unsigned int number){
 	return((number%2) == 0);
 }
 
 inline bool isTheEndOfSequence(){
 	return((second_pin == END_OF_SEQUENCE_FOR_SECOND_PIN) && (isFirstLedOfASegment()));
-  fc:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 100:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 104:	81 15       	cp	r24, r1
- 106:	98 40       	sbci	r25, 0x08	; 8
- 108:	81 f4       	brne	.+32     	; 0x12a <_Z18charlieplexDisplayv+0x2e>
+ 122:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 126:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 12a:	81 15       	cp	r24, r1
+ 12c:	98 40       	sbci	r25, 0x08	; 8
+ 12e:	81 f4       	brne	.+32     	; 0x150 <_Z18charlieplexDisplayv+0x54>
 inline bool isSecondLedOfASegment(){
 	return((ledCounter%2) == 0);
 }
 
 inline bool isFirstLedOfASegment(){
 	return((ledCounter%2) != 0);
- 10a:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 10e:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 130:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 134:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
 inline void updateFirstPinCode(){
 	first_pin = (first_pin << 1);
 }
 
 inline void computeFirstPinCode(){
 	if(isTheEndOfSequence()){
- 112:	80 ff       	sbrs	r24, 0
- 114:	0a c0       	rjmp	.+20     	; 0x12a <_Z18charlieplexDisplayv+0x2e>
+ 138:	80 ff       	sbrs	r24, 0
+ 13a:	0a c0       	rjmp	.+20     	; 0x150 <_Z18charlieplexDisplayv+0x54>
 	//return(isFirstLedOfASegment());
 	return(isFirstLedOfASegment() && ledCounter > 1);
 }
 
 inline void updateFirstPinCode(){
 	first_pin = (first_pin << 1);
- 116:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
- 11a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
- 11e:	88 0f       	add	r24, r24
- 120:	99 1f       	adc	r25, r25
- 122:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <first_pin+0x1>
- 126:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <first_pin>
+ 13c:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
+ 140:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
+ 144:	88 0f       	add	r24, r24
+ 146:	99 1f       	adc	r25, r25
+ 148:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <first_pin+0x1>
+ 14c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <first_pin>
 inline bool isEven(unsigned int number){
 	return((number%2) == 0);
 }
 
 inline bool isTheEndOfSequence(){
 	return((second_pin == END_OF_SEQUENCE_FOR_SECOND_PIN) && (isFirstLedOfASegment()));
- 12a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 12e:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 132:	81 15       	cp	r24, r1
- 134:	98 40       	sbci	r25, 0x08	; 8
- 136:	89 f4       	brne	.+34     	; 0x15a <_Z18charlieplexDisplayv+0x5e>
+ 150:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 154:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 158:	81 15       	cp	r24, r1
+ 15a:	98 40       	sbci	r25, 0x08	; 8
+ 15c:	89 f4       	brne	.+34     	; 0x180 <_Z18charlieplexDisplayv+0x84>
 inline bool isSecondLedOfASegment(){
 	return((ledCounter%2) == 0);
 }
 
 inline bool isFirstLedOfASegment(){
 	return((ledCounter%2) != 0);
- 138:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 13c:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 15e:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 162:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
 		updateFirstPinCode();
 	}
 }
 
 inline void computeSecondPinCode(){
 	if(isTheEndOfSequence()){
- 140:	80 ff       	sbrs	r24, 0
- 142:	0b c0       	rjmp	.+22     	; 0x15a <_Z18charlieplexDisplayv+0x5e>
+ 166:	80 ff       	sbrs	r24, 0
+ 168:	0b c0       	rjmp	.+22     	; 0x180 <_Z18charlieplexDisplayv+0x84>
 		second_pin = (first_pin << 1);
- 144:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
- 148:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
- 14c:	88 0f       	add	r24, r24
- 14e:	99 1f       	adc	r25, r25
- 150:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
- 154:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
- 158:	0d c0       	rjmp	.+26     	; 0x174 <_Z18charlieplexDisplayv+0x78>
+ 16a:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
+ 16e:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
+ 172:	88 0f       	add	r24, r24
+ 174:	99 1f       	adc	r25, r25
+ 176:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+ 17a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ 17e:	0c c0       	rjmp	.+24     	; 0x198 <_Z18charlieplexDisplayv+0x9c>
 inline bool isSecondLedOfASegment(){
 	return((ledCounter%2) == 0);
 }
 
 inline bool isFirstLedOfASegment(){
 	return((ledCounter%2) != 0);
- 15a:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 15e:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 180:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 184:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
 	return((second_pin == END_OF_SEQUENCE_FOR_SECOND_PIN) && (isFirstLedOfASegment()));
 	}
 
 inline bool isTimeToUpdateSecondPin(){
 	//return(isFirstLedOfASegment());
 	return(isFirstLedOfASegment() && ledCounter > 1);
- 162:	80 ff       	sbrs	r24, 0
- 164:	07 c0       	rjmp	.+14     	; 0x174 <_Z18charlieplexDisplayv+0x78>
- 166:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 16a:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
- 16e:	02 97       	sbiw	r24, 0x02	; 2
- 170:	08 f0       	brcs	.+2      	; 0x174 <_Z18charlieplexDisplayv+0x78>
- 172:	50 c0       	rjmp	.+160    	; 0x214 <_Z18charlieplexDisplayv+0x118>
+ 188:	80 ff       	sbrs	r24, 0
+ 18a:	06 c0       	rjmp	.+12     	; 0x198 <_Z18charlieplexDisplayv+0x9c>
+ 18c:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 190:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 194:	02 97       	sbiw	r24, 0x02	; 2
+ 196:	e8 f5       	brcc	.+122    	; 0x212 <_Z18charlieplexDisplayv+0x116>
 		second_pin = (second_pin << 1);
 	}
 }
 
 inline void computeDataDirectionCode(){
 	data_direction = (first_pin | second_pin);
- 174:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <first_pin>
- 178:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <first_pin+0x1>
- 17c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 180:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 184:	82 2b       	or	r24, r18
- 186:	93 2b       	or	r25, r19
- 188:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__data_end+0x1>
- 18c:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
+ 198:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <first_pin>
+ 19c:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <first_pin+0x1>
+ 1a0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 1a4:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 1a8:	82 2b       	or	r24, r18
+ 1aa:	93 2b       	or	r25, r19
+ 1ac:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__data_end+0x1>
+ 1b0:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
 inline char getSecondByteOfUnsignedInt(unsigned int number){
 	return (char ((number & 0xFF00) >> 8));
 }
 
 inline void setComputedPinCode(){
 	DDRD = getFirstByteOfUnsignedInt(data_direction);
- 190:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
- 194:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <__data_end+0x1>
- 198:	8a b9       	out	0x0a, r24	; 10
+ 1b4:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
+ 1b8:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <__data_end+0x1>
+ 1bc:	8a b9       	out	0x0a, r24	; 10
 	DDRB = (getSecondByteOfUnsignedInt(data_direction) << 2);
- 19a:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
- 19e:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <__data_end+0x1>
- 1a2:	89 2f       	mov	r24, r25
- 1a4:	88 0f       	add	r24, r24
- 1a6:	88 0f       	add	r24, r24
- 1a8:	84 b9       	out	0x04, r24	; 4
+ 1be:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
+ 1c2:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <__data_end+0x1>
+ 1c6:	89 2f       	mov	r24, r25
+ 1c8:	88 0f       	add	r24, r24
+ 1ca:	88 0f       	add	r24, r24
+ 1cc:	84 b9       	out	0x04, r24	; 4
 inline bool isSecondLedOfASegment(){
 	return((ledCounter%2) == 0);
 }
 
 inline bool isFirstLedOfASegment(){
 	return((ledCounter%2) != 0);
- 1aa:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 1ae:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
+ 1ce:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
+ 1d2:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
 
 inline void setComputedPinCode(){
 	DDRD = getFirstByteOfUnsignedInt(data_direction);
 	DDRB = (getSecondByteOfUnsignedInt(data_direction) << 2);
 	
 	if(isFirstLedOfASegment()){
- 1b2:	80 ff       	sbrs	r24, 0
- 1b4:	0e c0       	rjmp	.+28     	; 0x1d2 <_Z18charlieplexDisplayv+0xd6>
+ 1d6:	80 ff       	sbrs	r24, 0
+ 1d8:	0e c0       	rjmp	.+28     	; 0x1f6 <_Z18charlieplexDisplayv+0xfa>
 		PORTD = getFirstByteOfUnsignedInt(first_pin);
- 1b6:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
- 1ba:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
- 1be:	8b b9       	out	0x0b, r24	; 11
+ 1da:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
+ 1de:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
+ 1e2:	8b b9       	out	0x0b, r24	; 11
 		PORTB = (getSecondByteOfUnsignedInt(first_pin) << 2);
- 1c0:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
- 1c4:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
- 1c8:	89 2f       	mov	r24, r25
- 1ca:	88 0f       	add	r24, r24
- 1cc:	88 0f       	add	r24, r24
- 1ce:	85 b9       	out	0x05, r24	; 5
- 1d0:	0d c0       	rjmp	.+26     	; 0x1ec <_Z18charlieplexDisplayv+0xf0>
+ 1e4:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <first_pin>
+ 1e8:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <first_pin+0x1>
+ 1ec:	89 2f       	mov	r24, r25
+ 1ee:	88 0f       	add	r24, r24
+ 1f0:	88 0f       	add	r24, r24
+ 1f2:	85 b9       	out	0x05, r24	; 5
+ 1f4:	08 95       	ret
 	} else {
 		PORTD = getFirstByteOfUnsignedInt(second_pin);
- 1d2:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 1d6:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 1da:	8b b9       	out	0x0b, r24	; 11
+ 1f6:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 1fa:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 1fe:	8b b9       	out	0x0b, r24	; 11
 		PORTB = (getSecondByteOfUnsignedInt(second_pin) << 2);
- 1dc:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 1e0:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 1e4:	89 2f       	mov	r24, r25
- 1e6:	88 0f       	add	r24, r24
- 1e8:	88 0f       	add	r24, r24
- 1ea:	85 b9       	out	0x05, r24	; 5
-	second_pin = (1<<1);
-	data_direction = (first_pin | second_pin);
-}
-
-inline void	incrementLedCounter(){
-	if(ledCounter > NUMBER_OF_CHARLIE_LEDS){
- 1ec:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 1f0:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
- 1f4:	89 37       	cpi	r24, 0x79	; 121
- 1f6:	91 05       	cpc	r25, r1
- 1f8:	18 f0       	brcs	.+6      	; 0x200 <_Z18charlieplexDisplayv+0x104>
-		cleanDisplayCode();
- 1fa:	0e 94 5f 00 	call	0xbe	; 0xbe <_Z16cleanDisplayCodev>
- 1fe:	08 95       	ret
-	} else {
-		ledCounter++;
- 200:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <ledCounter>
- 204:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <ledCounter+0x1>
- 208:	01 96       	adiw	r24, 0x01	; 1
- 20a:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <ledCounter+0x1>
- 20e:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <ledCounter>
+ 200:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 204:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 208:	89 2f       	mov	r24, r25
+ 20a:	88 0f       	add	r24, r24
+ 20c:	88 0f       	add	r24, r24
+ 20e:	85 b9       	out	0x05, r24	; 5
 	computeFirstPinCode();
 	computeSecondPinCode();
 	computeDataDirectionCode();
 	setComputedPinCode();
-	incrementLedCounter();
+	
 }
- 212:	08 95       	ret
+ 210:	08 95       	ret
 
 inline void computeSecondPinCode(){
 	if(isTheEndOfSequence()){
 		second_pin = (first_pin << 1);
 	} else if(isTimeToUpdateSecondPin()){
 		second_pin = (second_pin << 1);
- 214:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 218:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 21c:	88 0f       	add	r24, r24
- 21e:	99 1f       	adc	r25, r25
- 220:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
- 224:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
- 228:	a5 cf       	rjmp	.-182    	; 0x174 <_Z18charlieplexDisplayv+0x78>
+ 212:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 216:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 21a:	88 0f       	add	r24, r24
+ 21c:	99 1f       	adc	r25, r25
+ 21e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+ 222:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+ 226:	b8 cf       	rjmp	.-144    	; 0x198 <_Z18charlieplexDisplayv+0x9c>
 
-0000022a <_GLOBAL__sub_I_ledCounter>:
+00000228 <_GLOBAL__sub_I_ledCounter>:
 // extern unsigned int data_direction;
 
 volatile unsigned int ledCounter = 0;
 volatile unsigned int first_pin = (1<<0);
 volatile unsigned int second_pin = (1<<1);
 volatile unsigned int data_direction = (first_pin | second_pin);
- 22a:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <first_pin>
- 22e:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <first_pin+0x1>
- 232:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
- 236:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
- 23a:	82 2b       	or	r24, r18
- 23c:	93 2b       	or	r25, r19
- 23e:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__data_end+0x1>
- 242:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
- 246:	08 95       	ret
+ 228:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <first_pin>
+ 22c:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <first_pin+0x1>
+ 230:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 234:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 238:	82 2b       	or	r24, r18
+ 23a:	93 2b       	or	r25, r19
+ 23c:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__data_end+0x1>
+ 240:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
+ 244:	08 95       	ret
 
-00000248 <__vector_9>:
+00000246 <__vector_9>:
 	{
 		
 	}
 }
 
 ISR(TIMER2_OVF_vect){
- 248:	1f 92       	push	r1
- 24a:	0f 92       	push	r0
- 24c:	0f b6       	in	r0, 0x3f	; 63
- 24e:	0f 92       	push	r0
- 250:	11 24       	eor	r1, r1
+ 246:	1f 92       	push	r1
+ 248:	0f 92       	push	r0
+ 24a:	0f b6       	in	r0, 0x3f	; 63
+ 24c:	0f 92       	push	r0
+ 24e:	11 24       	eor	r1, r1
 // 	sysRTC.ticker();
 // 	PORTB ^= (1<<2);
 // 	_delay_ms(100);
 // 	PORTB ^= (1<<2);
 	//sei();
 }
- 252:	0f 90       	pop	r0
- 254:	0f be       	out	0x3f, r0	; 63
- 256:	0f 90       	pop	r0
- 258:	1f 90       	pop	r1
- 25a:	18 95       	reti
+ 250:	0f 90       	pop	r0
+ 252:	0f be       	out	0x3f, r0	; 63
+ 254:	0f 90       	pop	r0
+ 256:	1f 90       	pop	r1
+ 258:	18 95       	reti
 
-0000025c <main>:
+0000025a <main>:
 int main(void)
 {
 	//setupTIMER2();
 		
 	//sei();
 	DDRC |=(1<<5);
- 25c:	3d 9a       	sbi	0x07, 5	; 7
+ 25a:	3d 9a       	sbi	0x07, 5	; 7
 	testeLimite = END_OF_SEQUENCE_FOR_SECOND_PIN;
- 25e:	80 e0       	ldi	r24, 0x00	; 0
- 260:	98 e0       	ldi	r25, 0x08	; 8
- 262:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <testeLimite+0x1>
- 266:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <testeLimite>
+ 25c:	80 e0       	ldi	r24, 0x00	; 0
+ 25e:	98 e0       	ldi	r25, 0x08	; 8
+ 260:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <testeLimite+0x1>
+ 264:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <testeLimite>
 	
     while (1) 
     {
 		charlieplexDisplay();
- 26a:	0e 94 7e 00 	call	0xfc	; 0xfc <_Z18charlieplexDisplayv>
+ 268:	0e 94 7e 00 	call	0xfc	; 0xfc <_Z18charlieplexDisplayv>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 26e:	2f e9       	ldi	r18, 0x9F	; 159
- 270:	86 e8       	ldi	r24, 0x86	; 134
- 272:	91 e0       	ldi	r25, 0x01	; 1
- 274:	21 50       	subi	r18, 0x01	; 1
- 276:	80 40       	sbci	r24, 0x00	; 0
- 278:	90 40       	sbci	r25, 0x00	; 0
- 27a:	e1 f7       	brne	.-8      	; 0x274 <main+0x18>
- 27c:	00 c0       	rjmp	.+0      	; 0x27e <main+0x22>
- 27e:	00 00       	nop
- 280:	f4 cf       	rjmp	.-24     	; 0x26a <main+0xe>
+ 26c:	2f e9       	ldi	r18, 0x9F	; 159
+ 26e:	86 e8       	ldi	r24, 0x86	; 134
+ 270:	91 e0       	ldi	r25, 0x01	; 1
+ 272:	21 50       	subi	r18, 0x01	; 1
+ 274:	80 40       	sbci	r24, 0x00	; 0
+ 276:	90 40       	sbci	r25, 0x00	; 0
+ 278:	e1 f7       	brne	.-8      	; 0x272 <main+0x18>
+ 27a:	00 c0       	rjmp	.+0      	; 0x27c <main+0x22>
+ 27c:	00 00       	nop
+ 27e:	f4 cf       	rjmp	.-24     	; 0x268 <main+0xe>
 
-00000282 <__tablejump2__>:
- 282:	ee 0f       	add	r30, r30
- 284:	ff 1f       	adc	r31, r31
- 286:	05 90       	lpm	r0, Z+
- 288:	f4 91       	lpm	r31, Z
- 28a:	e0 2d       	mov	r30, r0
- 28c:	09 94       	ijmp
+00000280 <__tablejump2__>:
+ 280:	ee 0f       	add	r30, r30
+ 282:	ff 1f       	adc	r31, r31
+ 284:	05 90       	lpm	r0, Z+
+ 286:	f4 91       	lpm	r31, Z
+ 288:	e0 2d       	mov	r30, r0
+ 28a:	09 94       	ijmp
 
-0000028e <_exit>:
- 28e:	f8 94       	cli
+0000028c <_exit>:
+ 28c:	f8 94       	cli
 
-00000290 <__stop_program>:
- 290:	ff cf       	rjmp	.-2      	; 0x290 <__stop_program>
+0000028e <__stop_program>:
+ 28e:	ff cf       	rjmp	.-2      	; 0x28e <__stop_program>

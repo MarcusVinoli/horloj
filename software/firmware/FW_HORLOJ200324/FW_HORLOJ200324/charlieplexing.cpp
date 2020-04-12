@@ -94,14 +94,14 @@ SG     ----|||| ||||||||		 ÍMPAR					 PAR
 */
 
 void cleanDisplayCode(){
-	ledCounter = 1;
+	ledCounter = 0;
 	first_pin = (1<<0);
 	second_pin = (1<<1);
 	data_direction = (first_pin | second_pin);
 }
 
 inline void	incrementLedCounter(){
-	if(ledCounter > NUMBER_OF_CHARLIE_LEDS){
+	if(ledCounter == NUMBER_OF_CHARLIE_LEDS){
 		cleanDisplayCode();
 	} else {
 		ledCounter++;
@@ -175,10 +175,10 @@ inline void setComputedPinCode(){
 
 //Put this function on ISR
 void charlieplexDisplay(){
-	
+	incrementLedCounter();
 	computeFirstPinCode();
 	computeSecondPinCode();
 	computeDataDirectionCode();
 	setComputedPinCode();
-	incrementLedCounter();
+	
 }
